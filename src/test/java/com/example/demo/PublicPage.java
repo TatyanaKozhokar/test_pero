@@ -8,31 +8,25 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PublicPage {
-    private String reviewPage = "https://vk.com/reviews-225299895";
-    private String allItemsPage = "https://vk.com/market-225299895?screen=group";
-    private String allServicesPage = "https://vk.com/uslugi-225299895?screen=group";
-    private String itemPage = "https://vk.com/market/product/test-225299895-10863893";
 
     public String getServicePage() {
-        return servicePage;
+        return "https://vk.com/market/product/fyvaf-225299895-10044406";
     }
 
     public String getItemPage() {
-        return itemPage;
+        return "https://vk.com/market/product/test-225299895-10863893";
     }
 
-    private String servicePage = "https://vk.com/market/product/fyvaf-225299895-10044406";
-
     public String getAllServicesPage() {
-        return allServicesPage;
+        return "https://vk.com/uslugi-225299895?screen=group";
     }
 
     public String getAllItemsPage() {
-        return allItemsPage;
+        return "https://vk.com/market-225299895?screen=group";
     }
 
     public String getReviewPage() {
-        return reviewPage;
+        return "https://vk.com/reviews-225299895";
     }
 
     public PublicPage() {

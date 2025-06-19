@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import com.codeborne.selenide.*;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.jupiter.api.*;
 
