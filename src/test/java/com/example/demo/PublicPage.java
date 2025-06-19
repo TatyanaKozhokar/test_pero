@@ -8,6 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PublicPage {
+    public String getSetUpUrl() {
+        return "https://vk.com/club225299895";
+    }
 
     public String getServicePage() {
         return "https://vk.com/market/product/fyvaf-225299895-10044406";

@@ -8,7 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 // page_url = https://vk.com/club225299895?w=product-225299895_10044406
 public class ProductPage {
-
+    public String getSetUpUrl() {
+        return "https://vk.com/club225299895?w=product-225299895_10044406";
+    }
 
     public ProductPage() {
         Selenide.page(this);

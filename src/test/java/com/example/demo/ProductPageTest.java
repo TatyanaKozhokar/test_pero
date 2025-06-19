@@ -13,8 +13,9 @@ public class ProductPageTest {
 
     @BeforeEach
     public void setUp() {
+        ProductPage productPage = new ProductPage();
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        open("https://vk.com/club225299895?w=product-225299895_10044406");
+        open(productPage.getSetUpUrl());
     }
 
     @Test

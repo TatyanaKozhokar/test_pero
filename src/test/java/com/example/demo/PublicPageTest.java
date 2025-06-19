@@ -22,8 +22,9 @@ public class PublicPageTest {
 
     @BeforeEach
     public void setUp() {
+        PublicPage publicPage = new PublicPage();
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        open("https://vk.com/club225299895");
+        open(publicPage.getSetUpUrl());
     }
 
     @DisplayName("Проверка названия сообщества")
