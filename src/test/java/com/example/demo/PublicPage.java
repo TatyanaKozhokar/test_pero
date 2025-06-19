@@ -100,5 +100,13 @@ public class PublicPage {
     public SelenideElement getItemImage() {
         return $("div[data-testid='product_card_picture']");    }
 
+    @Name("Кнопка Корзина")
+    public SelenideElement getCartButton() {
+        return $("a[class='groups_menu_item groups_menu_item_market_cart']");    }
+
+    @Name("Подробная информация")
+    public SelenideElement getMoreInformation() {
+        return $("a[class='groups-redesigned-info-more']");    }
+
 
 }

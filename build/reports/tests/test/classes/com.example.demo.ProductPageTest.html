@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">11</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.872s</div>
+<div class="counter">43.386s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">81%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,45 +61,151 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard error</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testReportButton()"></a>
+<h3 class="failures">Проверка кнопки Пожаловаться на услугу</h3>
+<span class="code">
+<pre>Page should have title Жалоба
+Actual value: фываф - бесплатно на ВК Маркет
+Screenshot: file:/C:/Users/Tatyanochka/IdeaProjects/test_pero/build/reports/tests/1750362265468.0.png
+Page source: file:/C:/Users/Tatyanochka/IdeaProjects/test_pero/build/reports/tests/1750362265468.0.html
+Timeout: 4 s.
+	at app//com.codeborne.selenide.impl.Waiter.wait(Waiter.java:52)
+	at app//com.codeborne.selenide.impl.Waiter.wait(Waiter.java:35)
+	at app//com.codeborne.selenide.Conditional.shouldHave(Conditional.java:42)
+	at app//com.example.demo.ProductPageTest.testReportButton(ProductPageTest.java:82)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base@17.0.15/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.15/java.util.ArrayList.forEach(ArrayList.java:1511)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testShopNameInTheMiddleButton()"></a>
+<h3 class="failures">Проверка нажатия на название магазина</h3>
+<span class="code">
+<pre>Page should have title Test public for test | ВКонтакте
+Actual value: фываф - бесплатно на ВК Маркет
+Screenshot: file:/C:/Users/Tatyanochka/IdeaProjects/test_pero/build/reports/tests/1750362275085.1.png
+Page source: file:/C:/Users/Tatyanochka/IdeaProjects/test_pero/build/reports/tests/1750362275085.1.html
+Timeout: 4 s.
+	at app//com.codeborne.selenide.impl.Waiter.wait(Waiter.java:52)
+	at app//com.codeborne.selenide.impl.Waiter.wait(Waiter.java:35)
+	at app//com.codeborne.selenide.Conditional.shouldHave(Conditional.java:42)
+	at app//com.example.demo.ProductPageTest.testShopNameInTheMiddleButton(ProductPageTest.java:104)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base@17.0.15/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.15/java.util.ArrayList.forEach(ArrayList.java:1511)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
 <tr>
 <th>Test</th>
+<th>Method name</th>
 <th>Duration</th>
 <th>Result</th>
 </tr>
 </thead>
 <tr>
 <td class="success">search()</td>
-<td class="success">5.872s</td>
+<td class="success">search()</td>
+<td class="success">3.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Проверка текста описания</td>
+<td class="success">testDescriptionTextDisplayed()</td>
+<td class="success">2.130s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Проверка наличия заголовка Описание</td>
+<td class="success">testDescriptionTitleDisplayed()</td>
+<td class="success">6.939s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Проверка дисклеймера</td>
+<td class="success">testDisclaimerDisplayed()</td>
+<td class="success">1.737s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Проверка названия товара</td>
+<td class="success">testItemTitleDisplayed()</td>
+<td class="success">1.843s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Проверка цены</td>
+<td class="success">testPriceDisplayed()</td>
+<td class="success">2.378s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Проверка кнопки Пожаловаться на услугу</td>
+<td class="failures">testReportButton()</td>
+<td class="failures">6.331s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Проверка кнопки Поделиться</td>
+<td class="success">testShareButton()</td>
+<td class="success">2.456s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Проверка нажатия на название магазина</td>
+<td class="failures">testShopNameInTheMiddleButton()</td>
+<td class="failures">7.225s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Проверка кнопки Подписаться</td>
+<td class="success">testSubscribeButton()</td>
+<td class="success">5.116s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Проверка нажатия кнопки Написать</td>
+<td class="success">testWriteButton()</td>
+<td class="success">4.209s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/k.zhukov/AquaProjects/test_pero/build/downloads/1711641366532_42982_1
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\Tatyanochka\IdeaProjects\test_pero\build\downloads\1750362231887_12988_1
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
 [Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
-мар. 28, 2024 6:56:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 123
-мар. 28, 2024 6:56:09 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 123.0.6312.86. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.13.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=123.0.6312.86 Platform=mac
+июн. 19, 2025 10:43:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 137
+июн. 19, 2025 10:43:54 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 137.0.7151.120. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.13.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=137.0.7151.120 Platform=windows
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -&gt; ChromeDriver: chrome on mac (373beddc4e47e161ea5f112aaf28fb23)
-[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (373beddc4e47e161ea5f112aaf28fb23),proxy=null,downloadsFolder=/Users/k.zhukov/AquaProjects/test_pero/build/downloads/1711641366532_42982_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -&gt; ChromeDriver: chrome on windows (ded80e2ea32da12eab37e321e2b17c57)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (ded80e2ea32da12eab37e321e2b17c57),proxy=null,downloadsFolder=C:\Users\Tatyanochka\IdeaProjects\test_pero\build\downloads\1750362231887_12988_1] in 1 [size=1]
 [Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
 </pre>
 </span>
@@ -112,7 +218,7 @@ WARNING: Unable to find version of CDP to use for 123.0.6312.86. You may need to
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2</a> at 28 мар. 2024 г., 18:56:12</p>
+<a href="http://www.gradle.org">Gradle 8.2</a> at 19 июн. 2025 г., 22:45:13</p>
 </div>
 </div>
 </body>

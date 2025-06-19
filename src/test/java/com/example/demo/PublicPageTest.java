@@ -146,4 +146,26 @@ public class PublicPageTest {
         Selenide.webdriver().shouldHave(WebDriverConditions.url(publicPage.getServicePage()));
     }
 
+    @DisplayName("Проверка перехода в корзину")
+    @Test
+    public void testPressCartButton() {
+        PublicPage publicPage = new PublicPage();
+        publicPage.getCartButton()
+                .scrollIntoView("{block: 'center'}")
+                .shouldBe(Condition.visible)
+                .click();
+        Selenide.webdriver().shouldHave(WebDriverConditions.title("Test public for test | Корзина"));
+    }
+
+    @DisplayName("Проверка нажатия Подробная информация")
+    @Test
+    public void testPressMoreInformationButton() {
+        PublicPage publicPage = new PublicPage();
+        publicPage.getMoreInformation()
+                .scrollIntoView("{block: 'center'}")
+                .shouldBe(Condition.visible)
+                .click();
+        $("div[id='wk_content']").shouldBe(Condition.visible);
+    }
+
 }
